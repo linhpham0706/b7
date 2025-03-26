@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Hot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .album-container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+            padding-bottom: 10px;
+        }
+        .album-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .album-container::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 10px;
+        }
+        .album {
+            min-width: 200px;
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            scroll-snap-align: center;
+        }
+        .album img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+        .album:hover img {
+            transform: scale(1.1);
+            filter: brightness(50%);
+        }
+        .album-title {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .artist {
+            font-size: 14px;
+            color: #bbb;
+        }
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .album:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Album Hot</h2>
+    <div class="album-container">
+        <div class="album">
+            <img src="https://imgix.bustle.com/uploads/image/2024/2/27/5dffff18-1324-4980-aadb-36d0addc1ea8-ghwhgliwmaamphv.jpeg?w=414&h=306&fit=crop&crop=focalpoint&auto=format%2Ccompress&fp-x=0.5339&fp-y=0.4279" alt="Baby Honey">
+            <div class="overlay">🤍 ▶</div>
+            <div class="album-title">eternal sunshine</div>
+            <div class="artist">Ariana grande</div>
+        </div>
+        <div class="album">
+            <img src="https://cdn.tuoitre.vn/471584752817336320/2023/10/6/anh3-1696591842896393662740.jpg" alt="Criu Non">
+            <div class="overlay">🤍 ▶</div>
+            <div class="album-title">MOONLIGHT</div>
+            <div class="artist">Jennie</div>
+        </div>
+        <div class="album">
+            <img src="https://i.etsystatic.com/23738954/r/il/e78552/2930297578/il_fullxfull.2930297578_mo53.jpg" alt="Người Ơi Đừng Bỏ Quên">
+            <div class="overlay">🤍 ▶</div>
+            <div class="album-title">GONE</div>
+            <div class="artist">Rosé</div>
+        </div>
+        <div class="album">
+            <img src="https://www.nme.com/wp-content/uploads/2023/03/jisoo-blackpink-title-poster.jpeg" alt="Nghe Nói Anh Yêu Em">
+            <div class="overlay">🤍 ▶</div>
+            <div class="album-title">FLOWER</div>
+            <div class="artist">Jisoo</div>
+        </div>
+        <div class="album">
+            <img src="https://i.ytimg.com/vi/HF8QAUkQCYk/maxresdefault.jpg" alt="Tự Ta Đa Tình">
+            <div class="overlay">🤍 ▶</div>
+            <div class="album-title">CUREL SUMMER</div>
+            <div class="artist">Taylor Swift</div>
+        </div>
+    </div>
+</body>
+</html>
